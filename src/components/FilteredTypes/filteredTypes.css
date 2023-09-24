@@ -1,0 +1,11 @@
+.sort_order, .delivery_order, .cost_order{
+    padding: 2rem 2rem;
+}
+
+.sort_order > div, .delivery_order > div, .cost_order > div{
+    padding-top: 1rem;
+}
+
+.sort_order div > label , .delivery_order div > label, .cost_order div > label{
+    margin-left: 1rem;
+}

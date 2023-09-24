@@ -1,0 +1,50 @@
+.card__main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(78, 76, 76, 0.098);
+}
+
+.card {
+    margin-left: 2rem;
+    border: 1px solid rgba(234, 230, 230, 0.961);
+    margin-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    border-color: white;
+    box-shadow: 1px 1px 1px 1px white;
+    
+}
+
+.card__main img {
+    width: 400px;
+    height: 300px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-color: white;
+    
+    object-fit: cover;
+}
+
+.res_rating{
+    align-items: center;
+    display: flex;
+}
+
+.star{
+    width: 0.8rem !important;
+    height: 0.8rem !important;
+    object-fit: cover;
+    margin-left: 0.3rem;
+}
+
+.res__top,
+.res__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.8rem;
+}
+
+.costForTwo{
+    margin-left: 0.8rem;
+    margin-bottom: 1rem;
+}

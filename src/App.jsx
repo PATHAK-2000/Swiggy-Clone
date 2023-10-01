@@ -1,19 +1,22 @@
-import React, { useState } from "react";
-import Header from "./components/Header/Header";
+import { useState } from "react";
+import Header from './components/Header/Header'
 import { ResContext } from "./utils/ResContext";
-import "./App.css";
 import Restaurants from "./components/Restaurants/Restaurants";
-import Filter from "./components/Filter/Filter";
+
+import "./App.css";
+
 
 function App() {
   const [restaurant, setRestaurant] = useState([]);
   const [handleLess, setHandleLess] = useState([]);
   const [handleMore, setHandleMore] = useState([]);
-  const [searched, setSearched] = useState([])
-  const [deliveryTimeState, setDeliveryTimeState] = useState(false)
+  const [searched, setSearched] = useState([]);
+  const [deliveryTimeState, setDeliveryTimeState] = useState(false);
   const [isModal, setIsModal] = useState(false);
 
+
   return (
+    <>
     <ResContext.Provider
       value={{
         restaurant,
@@ -29,11 +32,11 @@ function App() {
         searched,
         setSearched,
       }}
-    >
-      <Header />
-
+      >
+        
       <Restaurants />
     </ResContext.Provider>
+    </>
   );
 }
 

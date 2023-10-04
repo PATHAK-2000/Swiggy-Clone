@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import demo_img from "../../assets/images/demo.jpeg";
+import {Link} from 'react-router-dom'
 import { IMAGE_URL } from "../../utils/data";
 import star from "../../assets/logo/star.svg";
 import "./card.css";
+import Detail from "../Detail/Detail";
 
 const Card = ({ restaurant }) => {
   
@@ -13,10 +14,11 @@ const Card = ({ restaurant }) => {
           
           {data?.card?.card?.info && (
             <div className="card">
-              <img
+             <Link to={`/detail/${data?.card?.card?.info?.id}`}> <img
                 src={IMAGE_URL + data?.card?.card?.info?.cloudinaryImageId}
                 alt="demo_img"
-              />
+                
+              /></Link>
               <div className="res__top">
                 <div className="res__name">
                   <b>{data?.card?.card?.info?.name}</b>

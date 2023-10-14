@@ -1,29 +1,12 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { useLocation } from "react-router-dom";
-import { DETAIL_URL } from "../../utils/data";
+import useRestaurantMenu from "../../utils/useRestaurantMenu";
+
 import { IMAGE_URL_SMALL } from "../../utils/data";
 
 import "./detail.css";
 import DetailShimmer from "../Shimmer/DetailShimmer";
 import Error from "../Error/Error";
 const Detail = () => {
-  const [menu, setMenu] = useState([]);
-  const location = useLocation();
-
-  useEffect(() => {
-    const dataItems = async () => {
-      const data = await axios
-        .get(DETAIL_URL + location.pathname.replace("/detail/", ""))
-        .then((response) =>
-          setMenu(
-            response?.data?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR
-              ?.cards
-          )
-        );
-    };
-    dataItems();
-  }, [location.pathname]);
+  const menu = useRestaurantMenu();
 
   if (menu === undefined) {
     return <Error />;

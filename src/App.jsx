@@ -1,10 +1,9 @@
 import { useState } from "react";
-import Header from './components/Header/Header'
+import Header from "./components/Header/Header";
 import { ResContext } from "./utils/ResContext";
 import Restaurants from "./components/Restaurants/Restaurants";
 
 import "./App.css";
-
 
 function App() {
   const [restaurant, setRestaurant] = useState([]);
@@ -14,28 +13,26 @@ function App() {
   const [deliveryTimeState, setDeliveryTimeState] = useState(false);
   const [isModal, setIsModal] = useState(false);
 
-
   return (
     <>
-    <ResContext.Provider
-      value={{
-        restaurant,
-        setRestaurant,
-        handleLess,
-        setHandleLess,
-        handleMore,
-        setHandleMore,
-        deliveryTimeState,
-        setDeliveryTimeState,
-        isModal,
-        setIsModal,
-        searched,
-        setSearched,
-      }}
+      <ResContext.Provider
+        value={{
+          restaurant,
+          setRestaurant,
+          handleLess,
+          setHandleLess,
+          handleMore,
+          setHandleMore,
+          deliveryTimeState,
+          setDeliveryTimeState,
+          isModal,
+          setIsModal,
+          searched,
+          setSearched,
+        }}
       >
-        
-      <Restaurants />
-    </ResContext.Provider>
+        <Restaurants />
+      </ResContext.Provider>
     </>
   );
 }

@@ -7,7 +7,7 @@ import Detail from "../Detail/Detail";
 import Shimmer from "../Shimmer/Shimmer";
 const Card = ({ restaurant }) => {
   return (
-    <div className="card__main">
+    <div className="card__main" >
       {restaurant?.length == 0 ? (
         <>
           <Shimmer />

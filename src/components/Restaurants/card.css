@@ -1,4 +1,4 @@
-.card__main {
+    .card__main {
     display: flex;
     flex-wrap: wrap;
     background-color: rgba(78, 76, 76, 0.098);

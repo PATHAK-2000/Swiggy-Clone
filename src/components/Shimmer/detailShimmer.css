@@ -1,0 +1,9 @@
+.detailShimmer{
+    height: 150px;
+    width: 55rem;
+    background-color: rgba(128, 128, 128, 0.315);
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+}

@@ -1,0 +1,16 @@
+.errorMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 39vh;
+    background-color: lightgrey;
+    
+}
+
+.errorMain h3{
+    font-size: 36px;
+}
+
+.error{
+    height: 6rem;
+}

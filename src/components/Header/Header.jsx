@@ -13,7 +13,7 @@ const Header = () => {
           <h3>Ahmedabad</h3>
         </div>
       </div>
-      <div className="header__right">
+      {/* <div className="header__right">
         <ul>
           <Link to='/offers' className="links">
             {" "}
@@ -32,7 +32,7 @@ const Header = () => {
             <li>Cart</li>
           </Link>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

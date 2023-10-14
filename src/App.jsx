@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Header from "./components/Header/Header";
-import { ResContext } from "./utils/ResContext";
+import { ResContext } from "./context/ResContext";
 import Restaurants from "./components/Restaurants/Restaurants";
+
 
 import "./App.css";
 
@@ -12,7 +13,7 @@ function App() {
   const [searched, setSearched] = useState([]);
   const [deliveryTimeState, setDeliveryTimeState] = useState(false);
   const [isModal, setIsModal] = useState(false);
-
+  
   return (
     <>
       <ResContext.Provider

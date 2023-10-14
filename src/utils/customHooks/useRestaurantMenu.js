@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 // file imports
-import { DETAIL_URL } from "../utils/data";
+import { DETAIL_URL } from "../data";
 import { useLocation } from "react-router-dom";
 const useRestaurantMenu = () => {
 

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ResContext } from "../../utils/ResContext";
+import { ResContext } from "../../context/ResContext";
 import "./filteredTypes.css";
 import Card from "../Restaurants/Card";
 

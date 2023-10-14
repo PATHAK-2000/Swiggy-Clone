@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { ResContext } from "../../utils/ResContext";
+import { ResContext } from "../../context/ResContext";
 import Modal from "react-modal";
 import filter from "../../assets/logo/filter.svg";
 import close from "../../assets/logo/close.svg";

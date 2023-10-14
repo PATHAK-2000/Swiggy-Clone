@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import { ResContext } from "../../utils/ResContext";
+import { ResContext } from "../../context/ResContext";
 import { URL } from "../../utils/data";
 import axios from "axios";
 import Card from "./Card";

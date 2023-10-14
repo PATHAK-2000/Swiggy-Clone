@@ -1,4 +1,4 @@
-import useRestaurantMenu from "../../utils/useRestaurantMenu";
+import useRestaurantMenu from "../../utils/customHooks/useRestaurantMenu";
 
 import { IMAGE_URL_SMALL } from "../../utils/data";
 

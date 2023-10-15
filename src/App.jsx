@@ -18,7 +18,7 @@ function App() {
     <>
       <ResContext.Provider
         value={{
-          restaurant,
+          restaurant, 
           setRestaurant,
           handleLess,
           setHandleLess,

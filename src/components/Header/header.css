@@ -27,9 +27,12 @@
     margin-right: 3rem;
 } */
 
-.active__status img{
-    height: 60px;
+.active__status{
     margin-right: 2rem;
+}
+
+.status{
+    font-size: 23px;
 }
 
 .links{

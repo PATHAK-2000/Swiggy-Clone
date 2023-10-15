@@ -32,7 +32,7 @@ const Card = ({ restaurant }) => {
         restaurant?.map((data) => (
           <>
             {data?.card?.card?.info && (
-              <div className="card">
+              <div className="card"> 
                 <Link to={`/detail/${data?.card?.card?.info?.id}`}>
                   {" "}
                   <img

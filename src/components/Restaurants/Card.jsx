@@ -5,9 +5,16 @@ import star from "../../assets/logo/star.svg";
 import "./card.css";
 import Detail from "../Detail/Detail";
 import Shimmer from "../Shimmer/Shimmer";
+import useOnlineStatus from "../../utils/customHooks/useOnlineStatus";
 const Card = ({ restaurant }) => {
-  return (
-    <div className="card__main" >
+  const status = useOnlineStatus();
+
+
+
+  return status == true ? (
+    <h1 className="status__offline">Looks!! You are OFFLINE!!</h1>
+  ) : (
+    <div className="card__main">
       {restaurant?.length == 0 ? (
         <>
           <Shimmer />

@@ -1,28 +1,20 @@
-import React from "react";
-import { Offline, Online } from "react-detect-offline";
-
-import ONLINE from "../../assets/logo/online.svg";
-import OFFLINE from "../../assets/logo/offline.svg";
+import React, { useState, useEffect } from "react";
 
 const useOnlineStatus = () => {
-  return (
-    <div>
-      <Online>
-        <img
-          src={ONLINE}
-          alt="online"
-          style={{ width: "50px", marginRight: "4rem" }}
-        />
-      </Online>
-      <Offline>
-        <img
-          src={OFFLINE}
-          alt="offline"
-          style={{ width: "50px", marginRight: "4rem" }}
-        />
-      </Offline>
-    </div>
-  );
+  const [offline, setOffline] = useState(false);
+  useEffect(() => {
+    window.addEventListener("offline", () => {
+      setOffline(true);
+      
+    });
+
+    window.addEventListener("online", () => {
+      setOffline(false);
+      
+    });
+  }, []);
+
+  return offline;
 };
 
 export default useOnlineStatus;

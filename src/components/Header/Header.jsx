@@ -2,9 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo/restaurant.svg";
 import useOnlineStatus from "../../utils/customHooks/useOnlineStatus";
+import OFFLINE from '../../assets/logo/offline.svg'
+import ONLINE from '../../assets/logo/online.svg'
+
 import "./header.css";
 const Header = () => {
   const status = useOnlineStatus();
+  
   return (
     <div className="header__main">
       <div className="header__left">
@@ -19,7 +23,9 @@ const Header = () => {
         </div>
       </div>
       <div className="header__right">
-        <div className="active__status"> {status}</div>
+        <div className="active__status"> 
+          {status == false ? <img src={ONLINE} alt="online"  /> : <img src={OFFLINE} alt="offline" />}
+        </div>
       </div>
       {/* <div className="header__right">
         <ul>

@@ -1,7 +1,7 @@
 import useRestaurantMenu from "../../utils/customHooks/useRestaurantMenu";
 
 import { IMAGE_URL_SMALL } from "../../utils/data";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import "./detail.css";
 import DetailShimmer from "../Shimmer/DetailShimmer";
 import Error from "../Error/Error";
@@ -37,9 +37,10 @@ const Detail = () => {
                 {console.log(item?.card?.info)}
               </div>
               <div className="recommended_right_section">
-                <img
+                <LazyLoadImage
                   src={IMAGE_URL_SMALL + item?.card?.info?.imageId}
                   alt="image"
+                  effect="blur"
                 />
               </div>
             </div>

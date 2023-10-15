@@ -5,6 +5,7 @@ import star from "../../assets/logo/star.svg";
 import "./card.css";
 import Detail from "../Detail/Detail";
 import Shimmer from "../Shimmer/Shimmer";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import useOnlineStatus from "../../utils/customHooks/useOnlineStatus";
 const Card = ({ restaurant }) => {
   const status = useOnlineStatus();
@@ -35,9 +36,10 @@ const Card = ({ restaurant }) => {
               <div className="card"> 
                 <Link to={`/detail/${data?.card?.card?.info?.id}`}>
                   {" "}
-                  <img
+                  <LazyLoadImage
                     src={IMAGE_URL + data?.card?.card?.info?.cloudinaryImageId}
                     alt="demo_img"
+                    effect="blur"
                   />
                 </Link>
                 <div className="res__top">

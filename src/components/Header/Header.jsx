@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo/restaurant.svg";
 import useOnlineStatus from "../../utils/customHooks/useOnlineStatus";
-import OFFLINE from "../../assets/logo/offline.svg";
-import ONLINE from "../../assets/logo/online.svg";
+import appStore from "../../utils/appStore";
+import { useSelector } from "react-redux";
 
 import "./header.css";
 const Header = () => {
   const status = useOnlineStatus();
+  const cartItems = useSelector(store => store.cart.items)
 
   return (
     <div className="header__main">
@@ -23,6 +24,7 @@ const Header = () => {
         </div>
       </div>
       <div className="header__right">
+        <div className="cart"><h3> <Link to="/cart"> Cart - ( {cartItems.length} items )</Link></h3></div>
         <div className="active__status">
           <p className="status"> {status == false ? "🟢" : "🔴"}</p>
         </div>

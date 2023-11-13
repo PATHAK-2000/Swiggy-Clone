@@ -5,9 +5,11 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import "./detail.css";
 import DetailShimmer from "../Shimmer/DetailShimmer";
 import Error from "../Error/Error";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../utils/cartSlice";
 const Detail = () => {
   const menu = useRestaurantMenu();
-
+  const dispatch = useDispatch()
   if (menu === undefined) {
     return <Error />;
   }
@@ -37,11 +39,15 @@ const Detail = () => {
                 {console.log(item?.card?.info)}
               </div>
               <div className="recommended_right_section">
+                <div className="recommended_right_section_image">
                 <LazyLoadImage
                   src={IMAGE_URL_SMALL + item?.card?.info?.imageId}
                   alt="image"
                   effect="blur"
+                  
                 />
+                <button className="addCart" onClick={() => dispatch(addItem(item?.card?.info))}>Add +</button>
+                </div>
               </div>
             </div>
           ))

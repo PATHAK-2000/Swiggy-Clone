@@ -22,10 +22,15 @@
 }
 
 
-/* .header__right ul{
+.header__right{
     display: flex;
     margin-right: 3rem;
-} */
+    align-items: center;
+}
+
+.cart{
+    margin-right: 4rem;
+}
 
 .active__status{
     margin-right: 2rem;

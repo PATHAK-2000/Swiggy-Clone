@@ -9,14 +9,34 @@
     margin-bottom: 1rem;
     margin-top: 1rem;
     padding-bottom: 1rem;
-
+    
 }
 
-.recommended_right_section img{
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
 
+.recommended_right_section_image{
+
+    position: relative;
+}
+.recommended_right_section_image img{
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    opacity: 0.9;
+    
+}
+
+.addCart{
+    position: absolute;
+    top:0%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    padding: 0.3rem 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
 }
 
 .item_name{

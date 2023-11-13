@@ -13,8 +13,7 @@ const UserCart = () => {
     <div className="userCartMain">
       <div className="userCartDesc">
         {cartItems?.map((item) => (
-          <>
-            {console.log(item)}
+          <div className="userCartLayout" key={item?.id}>
             <div className="userCartRestaurant">
               <div className="userCartImage">
                 <LazyLoadImage
@@ -26,9 +25,11 @@ const UserCart = () => {
                 <h3> {item?.name}</h3>
                 <p>{item?.description}</p>
               </div>
-              
             </div>
-          </>
+            <div className="userCartDelete">
+              <button onClick={() => dispatch(removeItem(item?.id))}><p className="deleteText">Delete</p></button>
+            </div>
+          </div>
         ))}
       </div>
     </div>

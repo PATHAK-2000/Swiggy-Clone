@@ -9,7 +9,7 @@ import "./header.css";
 const Header = () => {
   const status = useOnlineStatus();
   const cartItems = useSelector(store => store.cart.items)
-
+  console.log(cartItems,"CART")
   return (
     <div className="header__main">
       <div className="header__left">
